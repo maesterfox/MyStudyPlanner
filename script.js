@@ -16,6 +16,7 @@ generateTablesButton.addEventListener("click", function () {
     if (!numStudyBlocksPerDay) return; // Cancelled
 
     const subjects = [];
+
     for (let i = 1; i <= numSubjects; i++) {
         const subjectTitle = prompt(`Enter the title of Subject ${i}`);
         if (subjectTitle === null) return; // Cancelled
@@ -53,10 +54,29 @@ generateTablesButton.addEventListener("click", function () {
             hoursCell.classList.add("hours-col");
             row.appendChild(hoursCell);
 
+            const subjectsForRow = [...subjects];
+            const subjectsPerColumn = {};
+
             for (let dayIndex = 0; dayIndex < numDaysPerWeek; dayIndex++) {
                 const cell = document.createElement("td");
-                const subjectIndex = (dayIndex * numStudyBlocksPerDay + Math.ceil(block / 2) - 1) % numSubjects;
-                cell.textContent = block % 2 === 1 ? subjects[subjectIndex] : 'Break';
+
+                if (block % 2 === 1) {
+                    const selectedSubjectIndex = Math.floor(Math.random() * subjectsForRow.length);
+                    const selectedSubject = subjectsForRow[selectedSubjectIndex];
+                    
+                    if (!subjectsPerColumn[dayIndex]) {
+                        subjectsPerColumn[dayIndex] = [];
+                    }
+                    
+                    if (subjectsPerColumn[dayIndex].indexOf(selectedSubject) < 0) {
+                        subjectsPerColumn[dayIndex].push(selectedSubject);
+                        subjectsForRow.splice(selectedSubjectIndex, 1);
+                        cell.textContent = selectedSubject;
+                    }
+                } else {
+                    cell.textContent = 'Break';
+                }
+
                 cell.classList.add(block % 2 === 0 ? 'break-cell' : 'subject-cell');
                 row.appendChild(cell);
             }

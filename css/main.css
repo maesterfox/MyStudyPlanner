@@ -47,7 +47,7 @@ button {
   .study-table:hover {
     opacity: 1;
     box-shadow: 0 0 5px whitesmoke, 0 0 10px #6890e7, 0 0 15px #6890e7;
-    transform: scale(1.5); }
+    transform: scale(1.3); }
   .study-table th, .study-table td {
     border: 1px solid #342b52;
     padding: 8px;
@@ -56,7 +56,7 @@ button {
     background-color: #6890e7;
     color: #12123a; }
   .study-table td {
-    background-color: #5e6491;
+    background-color: #5360bf;
     color: #12123a;
     transition: .5 ease-in-out; }
     .study-table td:hover {
@@ -64,8 +64,8 @@ button {
   .study-table .hours-col {
     background-color: #6890e7; }
   .study-table .break-cell {
-    background-color: #8c8c8c;
+    background-color: #4f4f4f;
     color: white;
-    width: 100px; }
+    width: 150px; }
     .study-table .break-cell:hover {
       background-color: black; }

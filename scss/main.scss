@@ -3,10 +3,10 @@
 $bg: rgb(18, 18, 58);
 $txt: rgb(74, 234, 255);
 $tert: #6890e7;
-$quat: rgb(94, 100, 145);
+$quat: rgb(83, 96, 191);
 $quin: rgb(175, 173, 173);
 $grey: #342b52;
-$black: rgb(140, 140, 140);
+$black: rgb(79, 79, 79);
 
 * {
   margin: 0;
@@ -62,7 +62,7 @@ button {
   &:hover {
     opacity: 1;
     box-shadow: 0 0 5px whitesmoke, 0 0 10px $tert, 0 0 15px $tert;
-    transform: scale(1.5);
+    transform: scale(1.3);
   }
 
   th, td {
@@ -94,7 +94,7 @@ button {
   .break-cell {
     background-color: $black;
     color: white;
-    width: 100px;
+    width: 150px;
 
     &:hover {
         background-color: black;

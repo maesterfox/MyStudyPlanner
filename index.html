@@ -3,25 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/styles.css">
-    <title>Document</title>
+    <link rel="stylesheet" href="css/main.css">
+    <title>Study Planner</title>
 </head>
 <body>
-        <!-- <div>
-            <span title="hello" id="hi" data-test="this is a test">Hello</span>
-            <span id="bye">Bye</span>
-        </div> -->
-    
-        <div class="grandparent">
-            <div class="parent">
-                <div class="child">
-    
-                </div>
-            </div>
-        </div>
-    
-    <script src="main.js"></script>    
-    
-    
+    <h1>Dynamic Study Plan Generator</h1>
+
+<!-- Modal -->
+<div id="studyPlanModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Generate Study Plan</h2>
+      <div class="input-container">
+        <input type="text" id="primarySubjectInput" placeholder="Primary subjects (comma-separated)">
+      </div>
+      <div class="input-container">
+        <input type="text" id="secondarySubjectInput" placeholder="Secondary subjects (comma-separated)">
+      </div>
+      <div class="input-container">
+        <input type="number" id="hoursInput" placeholder="Enter hours per day">
+      </div>
+      <div class="input-container">
+        <input type="number" id="daysInput" placeholder="Enter days per week">
+      </div>
+      <div class="input-container">
+        <input type="number" id="weeksInput" placeholder="Enter total weeks">
+      </div>
+      <button id="submitModal">Submit</button>
+    </div>
+  </div>
+  
+  
+  <!-- Trigger/Open The Modal -->
+  <button id="generateStudyPlanBtn">Generate Study Plan</button>
+
+    <div id="studyPlanTables"></div>
+
+    <script src="js/script.js" defer></script>
 </body>
 </html>

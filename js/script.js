@@ -29,8 +29,12 @@ document.getElementById("submitModal").addEventListener("click", function () {
   const secondarySubjectsInput = document.getElementById(
     "secondarySubjectInput"
   ).value;
+  const tertiarySubjectsInput = document.getElementById(
+    "tertiarySubjectInput"
+  ).value;
   const primarySubjects = primarySubjectsInput.split(",");
   const secondarySubjects = secondarySubjectsInput.split(",");
+  const tertiarySubjects = tertiarySubjectsInput.split(",");
 
   const allSubjects = [...primarySubjects, ...secondarySubjects];
 
@@ -61,6 +65,7 @@ document.getElementById("submitModal").addEventListener("click", function () {
 
   // Calculate the total number of 2-hour blocks available in a day
   const totalBlocksPerDay = Math.floor(hoursPerDay / 2);
+  const tertiaryOneHourBlocks = Math.floor(hoursPerDay * 0.1);
 
   // Create a weighted subject list where primary subjects appear twice as often as secondary subjects
   const weightedSubjects = [
@@ -68,8 +73,11 @@ document.getElementById("submitModal").addEventListener("click", function () {
     ...primarySubjects,
     ...primarySubjects,
     ...primarySubjects,
+    ...primarySubjects,
     ...secondarySubjects,
     ...secondarySubjects,
+    ...secondarySubjects,
+    ...tertiarySubjects,
   ];
 
   // Generate the study plan tables
@@ -80,6 +88,12 @@ document.getElementById("submitModal").addEventListener("click", function () {
     const table = document.createElement("table");
     table.className = "study-table";
 
+    // Add tertiary subjects into weightedSubjects
+    for (let i = 0; i < tertiaryOneHourBlocks; i++) {
+      weightedSubjects.push(tertiarySubjects);
+    }
+
+    // Table Header
     const headerRow = document.createElement("tr");
     headerRow.innerHTML = '<th class="hours-col">Hours</th>';
     for (let dayIndex = 0; dayIndex < daysPerWeek; dayIndex++) {
@@ -90,21 +104,40 @@ document.getElementById("submitModal").addEventListener("click", function () {
     }
     table.appendChild(headerRow);
 
-    for (let block = 0; block < totalBlocksPerDay; block++) {
+    // Variable to track whether the previous subject should span to the next row
+    let prevSubjectSpan = null;
+
+    // Loop through total number of 1-hour blocks
+    for (let block = 0; block < totalBlocksPerDay * 2; block++) {
+      // 2 rows for each 2-hour block
       const subjectsForRow = [...weightedSubjects];
       shuffleArray(subjectsForRow); // Shuffle the subjects for interleaving
 
       // Create a study row
       const studyRow = document.createElement("tr");
       const studyHoursCell = document.createElement("td");
-      studyHoursCell.textContent = "2"; // 2-hour study block
+      studyHoursCell.textContent = "1"; // 1-hour study block
       studyHoursCell.classList.add("hours-col");
       studyRow.appendChild(studyHoursCell);
 
       for (let dayIndex = 0; dayIndex < daysPerWeek; dayIndex++) {
         const studyCell = document.createElement("td");
-        const subjectIndex = (block + dayIndex) % weightedSubjects.length;
-        const subject = subjectsForRow[subjectIndex];
+        let subject;
+
+        if (prevSubjectSpan) {
+          // Continue the previous subject for 2-hour blocks
+          subject = prevSubjectSpan;
+          prevSubjectSpan = null;
+        } else {
+          const subjectIndex =
+            (Math.floor(block / 2) + dayIndex) % weightedSubjects.length;
+          subject = subjectsForRow[subjectIndex];
+          if (subject !== tertiarySubjects) {
+            // If the subject is not tertiary, it should span the next row
+            prevSubjectSpan = subject;
+          }
+        }
+
         studyCell.textContent = subject;
         studyCell.classList.add("subject-cell");
         studyRow.appendChild(studyCell);
@@ -118,7 +151,6 @@ document.getElementById("submitModal").addEventListener("click", function () {
       }
       table.appendChild(studyRow);
     }
-
     studyPlanTablesContainer.appendChild(table);
   }
 

@@ -1,44 +1,56 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/main.css">
-    <title>Study Planner</title>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="css/main.css" rel="stylesheet"/>
+<title>Study Planner</title>
 </head>
 <body>
-    <h1>Dynamic Study Plan Generator</h1>
-
+<h1>Dynamic Study Plan Generator</h1>
+<div id="queryFields">
+<input id="plannedStudyHours" placeholder="Planned Study Hours" type="number"/>
+<input id="targetScore" placeholder="Target Score" type="number"/>
+<select id="productiveDays" title="productiveDays">
+<option value="Weekdays">Weekdays</option>
+<option value="Weekends">Weekends</option>
+</select>
+<button onclick="queryDataset()">Generate Advice</button>
+<input id="tertiarySubject" placeholder="Tertiary Subject" type="text"/></div>
+<div id="queryResult"></div>
 <!-- Modal -->
-<div id="studyPlanModal" class="modal">
-    <div class="modal-content">
-      <span class="close">&times;</span>
-      <h2>Generate Study Plan</h2>
-      <div class="input-container">
-        <input type="text" id="primarySubjectInput" placeholder="Primary subjects (comma-separated)">
-      </div>
-      <div class="input-container">
-        <input type="text" id="secondarySubjectInput" placeholder="Secondary subjects (comma-separated)">
-      </div>
-      <div class="input-container">
-        <input type="number" id="hoursInput" placeholder="Enter hours per day">
-      </div>
-      <div class="input-container">
-        <input type="number" id="daysInput" placeholder="Enter days per week">
-      </div>
-      <div class="input-container">
-        <input type="number" id="weeksInput" placeholder="Enter total weeks">
-      </div>
-      <button id="submitModal">Submit</button>
-    </div>
+<div class="modal" id="studyPlanModal">
+<div class="modal-content">
+<span class="close">×</span>
+<h2>Generate Study Plan</h2>
+<div class="input-container">
+<input id="primarySubjectInput" placeholder="Primary subjects (comma-separated)" type="text"/>
+</div>
+<div class="input-container">
+<input id="secondarySubjectInput" placeholder="Secondary subjects (comma-separated)" type="text"/>
+</div>
+<div class="input-container">
+  <input id="tertiarySubjectInput" placeholder="Tertiary subjects (comma-separated)" type="text"/>
   </div>
-  
-  
-  <!-- Trigger/Open The Modal -->
-  <button id="generateStudyPlanBtn">Generate Study Plan</button>
-
-    <div id="studyPlanTables"></div>
-
-    <script src="js/script.js" defer></script>
+<div class="input-container">
+<input id="hoursInput" placeholder="Enter hours per day" type="number"/>
+</div>
+<div class="input-container">
+<input id="daysInput" placeholder="Enter days per week" type="number"/>
+</div>
+<div class="input-container">
+<input id="weeksInput" placeholder="Enter total weeks" type="number"/>
+</div>
+<button id="submitModal">Submit</button>
+</div>
+</div>
+<!-- Trigger/Open The Modal -->
+<!-- <div id="buttonContainer">
+    <button id="newButton">Estimate My Score</button>
+  </div> -->
+<button id="generateStudyPlanBtn">Generate Study Plan</button>
+<div id="studyPlanTables"></div>
+<script defer="" src="js/script.js"></script>
 </body>
 </html>

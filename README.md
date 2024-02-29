@@ -1,51 +1,37 @@
-Study Planner App
-Table of Contents
-Introduction
-Features
-Technologies Used
-Installation
-Usage
-Pomodoro Learning Principles
-Contributing
-License
-Introduction
-The Study Planner App is designed to help users manage their study schedule effectively. Users can enter various subjects, allocate study hours per day, specify days per week, and set a total number of weeks for which they plan to study. The app generates a dynamic HTML table that integrates Pomodoro learning principles.
+Project Documentation: Study Plan Generator
 
-Features
-Dynamic Study Plan Table: Allows users to see their study schedule in a visual format.
-Subject-wise Planning: Enable users to enter multiple subjects.
-Time Management: Users can specify hours of study per day, days per week, and total weeks.
-Pomodoro Technique: Implements Pomodoro learning principles to help users focus.
-Technologies Used
-HTML
-CSS
-JavaScript
-Installation
-Clone the repository.
-bash
-Copy code
-git clone https://github.com/maesterfox/studyplanner.git
-Navigate to the project directory.
-bash
-Copy code
-cd study-planner-app
-Open index.html in your browser.
-Usage
-Open the app in your web browser.
-Enter the subjects you plan to study.
-Specify the hours of study per day.
-Select the days of the week you plan to study.
-Enter the total number of weeks for your study plan.
-Click "Generate Plan" to view your study schedule.
-Pomodoro Learning Principles
-The app integrates the Pomodoro Technique, a time management method developed by Francesco Cirillo. The technique uses a timer to break down work into intervals, traditionally 25 minutes in length, separated by short breaks.
+Introduction:
+The Study Plan Generator is a web application designed to help users create personalized study plans based on their subjects, available study hours, days per week, and total weeks of study. This documentation provides an overview of the project, its features, and how to use it.
 
-Contributing
-Feel free to fork the repository and submit pull requests.
+Features:
 
-License
-<<<<<<< HEAD
-This project is licensed under the MIT License.# MyStudyPlanner
-=======
-This project is licensed under the MIT License.
->>>>>>> e29cd8505b61fa62029ad0f241a9f46b737e3ddc
+Modal Interface: The application utilizes a modal interface for an intuitive user experience. Users can input their study preferences within the modal window.
+Subject Input: Users can input primary, secondary, and tertiary subjects into the modal. Subjects are entered as comma-separated values.
+Study Parameters: Users can specify the number of hours available per day, the number of days available per week for study, and the total number of weeks they plan to study.
+Generate Study Plan: After inputting study parameters, users can submit their preferences to generate a personalized study plan.
+Responsive Design: The application is designed to be responsive, ensuring optimal usability across various devices and screen sizes.
+Usage:
+
+Opening the Modal:
+Click on the "Generate Study Plan" button to open the modal interface.
+Input Study Preferences:
+Enter primary, secondary, and tertiary subjects into their respective input fields, separated by commas.
+Specify the number of hours available per day, days available per week, and the total number of weeks for study.
+Generating the Study Plan:
+Click on the "Submit" button to generate the study plan based on the provided preferences.
+Viewing the Study Plan:
+The generated study plan will be displayed within the modal window.
+Technologies Used:
+
+HTML: Markup language for creating the structure of the web application.
+CSS: Styling language for designing the visual layout and appearance.
+JavaScript: Programming language for implementing interactive features and logic.
+Modal: Utilized to create an interactive interface for inputting study preferences.
+Responsive Design: Implemented to ensure compatibility with various devices and screen sizes.
+Future Enhancements:
+
+Save and Load Functionality: Allow users to save their study preferences and load them later for convenience.
+User Accounts: Implement user accounts to enable personalized study plans and tracking of study progress.
+Additional Customization Options: Provide users with more customization options for their study plans, such as priority levels for subjects and study sessions.
+Conclusion:
+The Study Plan Generator offers a convenient solution for users to create personalized study plans tailored to their preferences and schedules. With its intuitive interface and customizable features, users can effectively organize their study routines and optimize their learning experiences.

@@ -34,13 +34,63 @@
 </div>
 <button id="submitModal">Submit</button>
 </div>
-<span class="close">Close Generator</span>
+<button class="close">Close Generator</button>
 
 </div>
-<!-- Trigger/Open The Modal -->
-<!-- <div id="buttonContainer">
-    <button id="newButton">Estimate My Score</button>
-  </div> -->
+
+
+<!-- Button to Open Modal -->
+<button id="documentationBtn">Open Documentation</button>
+
+<!-- Modal -->
+<div class="modal" id="documentationModal">
+  <div class="modal-content">
+    <h2>Project Documentation: Study Plan Generator</h2>
+    <div class="textContent">
+    <h3>Introduction:</h3>
+    <p>The Study Plan Generator is a web application designed to help users create personalized study plans based on their subjects, available study hours, days per week, and total weeks of study. This documentation provides an overview of the project, its features, and how to use it.</p>
+
+    <h3>Features:</h3>
+    <ul>
+      <li><strong>Modal Interface:</strong> The application utilizes a modal interface for an intuitive user experience. Users can input their study preferences within the modal window.</li>
+      <li><strong>Subject Input:</strong> Users can input primary, secondary, and tertiary subjects into the modal. Subjects are entered as comma-separated values.</li>
+      <li><strong>Study Parameters:</strong> Users can specify the number of hours available per day, the number of days available per week for study, and the total number of weeks they plan to study.</li>
+      <li><strong>Generate Study Plan:</strong> After inputting study parameters, users can submit their preferences to generate a personalized study plan.</li>
+      <li><strong>Responsive Design:</strong> The application is designed to be responsive, ensuring optimal usability across various devices and screen sizes.</li>
+    </ul>
+
+    <h3>Usage:</h3>
+    <ol>
+      <li><strong>Opening the Modal:</strong> Click on the "Generate Study Plan" button to open the modal interface.</li>
+      <li><strong>Input Study Preferences:</strong> Enter primary, secondary, and tertiary subjects into their respective input fields, separated by commas. Specify the number of hours available per day, days available per week, and the total number of weeks for study.</li>
+      <li><strong>Generating the Study Plan:</strong> Click on the "Submit" button to generate the study plan based on the provided preferences. The generated study plan will be displayed within the modal window.</li>
+    </ol>
+
+    <h3>Technologies Used:</h3>
+    <ul>
+      <li><strong>HTML:</strong> Markup language for creating the structure of the web application.</li>
+      <li><strong>CSS:</strong> Styling language for designing the visual layout and appearance.</li>
+      <li><strong>JavaScript:</strong> Programming language for implementing interactive features and logic.</li>
+      <li><strong>Modal:</strong> Utilized to create an interactive interface for inputting study preferences.</li>
+      <li><strong>Responsive Design:</strong> Implemented to ensure compatibility with various devices and screen sizes.</li>
+    </ul>
+
+    <h3>Future Enhancements:</h3>
+    <ul>
+      <li><strong>Save and Load Functionality:</strong> Allow users to save their study preferences and load them later for convenience.</li>
+      <li><strong>User Accounts:</strong> Implement user accounts to enable personalized study plans and tracking of study progress.</li>
+      <li><strong>Additional Customization Options:</strong> Provide users with more customization options for their study plans, such as priority levels for subjects and study sessions.</li>
+    </ul>
+
+    <h3>Conclusion:</h3>
+    <p>The Study Plan Generator offers a convenient solution for users to create personalized study plans tailored to their preferences and schedules. With its intuitive interface and customizable features, users can effectively organize their study routines and optimize their learning experiences.</p>
+    </div>
+    <button id="closeDocumentationBtn">Close Documentation</button>
+
+  </div>
+</div>
+
+</div>
 <button id="generateStudyPlanBtn">Generate Study Plan</button>
 <div id="studyPlanTables"></div>
 <script defer="" src="js/script.js"></script>

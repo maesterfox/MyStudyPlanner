@@ -1,9 +1,12 @@
 // Get modal and button elements
 const modal = document.getElementById("studyPlanModal");
+const documentationModal = document.getElementById("documentationModal");
 const btn = document.getElementById("generateStudyPlanBtn");
 const span = document.getElementsByClassName("close")[0];
-const submitModal = document.getElementById("submitModal");
 const generateBtn = document.getElementById("generateStudyPlanBtn"); // Get the button
+const closeDocumentationBtn = document.getElementById("closeDocumentationBtn");
+
+// Add event listeners
 
 // Functions to show/hide the button
 function showButton() {
@@ -16,6 +19,11 @@ function openModal() {
   hideButton();
 }
 
+function openDocumentationModal() {
+  console.log("openDocumentationModal called");
+  documentationModal.style.display = "block";
+}
+
 function hideButton() {
   console.log("hideButton called"); // Add this line
   generateBtn.style.display = "none";
@@ -25,22 +33,35 @@ function closeModal() {
   modal.style.display = "none";
   showButton();
 }
+
+function closeDocumentationModal() {
+  documentationModal.style.display = "none";
+}
+
 // Open modal
 btn.onclick = function () {
   modal.style.display = "block";
 };
+
+// Open documentation modal
+document
+  .getElementById("documentationBtn")
+  .addEventListener("click", openDocumentationModal);
 
 // Close modal
 span.onclick = function () {
   modal.style.display = "none";
 };
 
+// Close documentation modal
+closeDocumentationBtn.onclick = closeDocumentationModal;
+
 // Add event listeners to your modal's open/close triggers
 const modalTriggerBtn = document.getElementById("generateStudyPlanBtn"); // Replace with your trigger
 modalTriggerBtn.addEventListener("click", openModal);
 
 // Close the modal
-document.getElementById("studyPlanModal").style.display = "none";
+modal.style.display = "none"; // Corrected
 
 // Close span (attaches to the closeModal function)
 span.onclick = closeModal;
@@ -51,6 +72,7 @@ window.onclick = function (event) {
     modal.style.display = "none";
   }
 };
+
 // On submit, gather inputs and generate study plan
 document.getElementById("submitModal").addEventListener("click", function () {
   closeModal();

@@ -1,3 +1,26 @@
+// In your external JavaScript file
+
+document.addEventListener("DOMContentLoaded", function () {
+  showLoader();
+
+  setTimeout(function () {
+    hideLoader();
+  }, 4000); // 4 seconds delay before hiding the loader
+});
+
+function showLoader() {
+  var loader = document.querySelector(".loader");
+  loader.style.opacity = "1"; // Ensure the loader is fully visible
+}
+
+function hideLoader() {
+  var loader = document.querySelector(".loader");
+  loader.style.opacity = "0"; // Set opacity to 0 to trigger transition
+  setTimeout(function () {
+    loader.style.display = "none"; // Hide the loader after the transition
+  }, 1000); // Wait for the transition to complete (1 second)
+}
+
 // Get modal and button elements
 const modal = document.getElementById("studyPlanModal");
 const documentationModal = document.getElementById("documentationModal");

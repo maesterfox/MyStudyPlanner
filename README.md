@@ -1,11 +1,21 @@
 Study Plan Generator
 The Study Plan Generator is a web application designed to help users create personalized study plans based on their subjects, available study hours, days per week, and total weeks of study. This documentation provides an overview of the project, its features, and how to use it.
 
+[Study Planner Website](https://study.davidfoxdev.co.uk)
+
+![Image Description](img/studyplanner.png)
+
 Features
 Modal Interface: The application utilizes a modal interface for an intuitive user experience. Users can input their study preferences within the modal window.
 Subject Input: Users can input primary, secondary, and tertiary subjects into the modal. Subjects are entered as comma-separated values.
 Study Parameters: Users can specify the number of hours available per day, the number of days available per week for study, and the total number of weeks they plan to study.
+
+![Image Description](/img/study.JPG)
+
 Generate Study Plan: After inputting study parameters, users can submit their preferences to generate a personalized study plan.
+
+![Image Description](/img/study2.JPG)
+
 Responsive Design: The application is designed to be responsive, ensuring optimal usability across various devices and screen sizes.
 Usage
 Opening the Modal: Click on the "Generate Study Plan" button to open the modal interface.

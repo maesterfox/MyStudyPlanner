@@ -70,7 +70,6 @@ button:hover {
 .study-table:hover {
   opacity: 1;
   box-shadow: 0 0 5px whitesmoke, 0 0 10px #4a4d55, 0 0 15px #28292c;
-  transform: scale(1.2);
 }
 
 .study-table th, .study-table td {
@@ -111,6 +110,9 @@ button:hover {
 .study-table .break-cell:hover {
   background-color: black;
 }
+
+
+
 
 /* New styles for the subject counts table */
 #subjectCountsTable {
@@ -153,6 +155,10 @@ button:hover {
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); /* Add box shadow for a nice effect */
   padding: 20px; /* Add padding */
   overflow: auto; /* Allow scrolling if content exceeds modal height */
+}
+
+ul {
+  list-style: none;
 }
 
 
@@ -254,4 +260,57 @@ button:hover {
 /* Handle on hover */
 .modal::-webkit-scrollbar-thumb:hover {
   background-color: #666; /* Change the color of the scrollbar handle on hover */
+}
+
+
+
+/* Media query for mobile screens */
+@media only screen and (max-width: 600px) {
+  .study-table {
+    font-size: 14px; /* Decrease font size for smaller screens */
+  }
+
+  button {
+    margin: 10px;
+    width: 200px;
+    height: 30px;
+    font-size: 14px;
+  }
+  
+  .study-table th, .study-table td {
+    padding: 3px; /* Decrease padding for smaller screens */
+  }
+
+  .study-table .break-cell {
+    width: 100px; /* Adjust break cell width for smaller screens */
+  }
+
+  .modal p {
+    font-size: 14px; /* Decrease font size for smaller screens */
+    margin: auto;
+    margin-bottom: 1rem;
+  }
+
+  .input-container {
+    margin-bottom: 25px;
+  }
+  
+  .input-container input {
+    width: 90%;
+    height: 30px;
+    padding: 0 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 12px;
+  }
+
+  h1 {
+    font-size: 32px;
+    margin-top: 4rem;
+  }
+  h2 {
+    font-size: 24px;
+    margin-bottom: 2rem;
+  }
+ 
 }

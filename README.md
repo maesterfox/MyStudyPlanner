@@ -44,4 +44,8 @@ Contributing
 Feel free to fork the repository and submit pull requests.
 
 License
+<<<<<<< HEAD
 This project is licensed under the MIT License.# MyStudyPlanner
+=======
+This project is licensed under the MIT License.
+>>>>>>> e29cd8505b61fa62029ad0f241a9f46b737e3ddc

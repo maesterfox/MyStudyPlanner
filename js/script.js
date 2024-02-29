@@ -3,6 +3,7 @@ const modal = document.getElementById("studyPlanModal");
 const btn = document.getElementById("generateStudyPlanBtn");
 const span = document.getElementsByClassName("close")[0];
 const submitModal = document.getElementById("submitModal");
+<<<<<<< HEAD
 const generateBtn = document.getElementById("generateStudyPlanBtn"); // Get the button
 
 // Functions to show/hide the button
@@ -25,6 +26,9 @@ function closeModal() {
   modal.style.display = "none";
   showButton();
 }
+=======
+
+>>>>>>> e29cd8505b61fa62029ad0f241a9f46b737e3ddc
 // Open modal
 btn.onclick = function () {
   modal.style.display = "block";
@@ -35,6 +39,7 @@ span.onclick = function () {
   modal.style.display = "none";
 };
 
+<<<<<<< HEAD
 // Add event listeners to your modal's open/close triggers
 const modalTriggerBtn = document.getElementById("generateStudyPlanBtn"); // Replace with your trigger
 modalTriggerBtn.addEventListener("click", openModal);
@@ -48,6 +53,8 @@ document.getElementById("studyPlanModal").style.display = "none";
 // Close span (attaches to the closeModal function)
 span.onclick = closeModal;
 
+=======
+>>>>>>> e29cd8505b61fa62029ad0f241a9f46b737e3ddc
 // Close modal if clicked outside of it
 window.onclick = function (event) {
   if (event.target === modal) {
@@ -108,10 +115,13 @@ document.getElementById("submitModal").addEventListener("click", function () {
     ...primarySubjects,
     ...primarySubjects,
     ...primarySubjects,
+<<<<<<< HEAD
     ...primarySubjects,
     ...primarySubjects,
     ...primarySubjects,
     ...secondarySubjects,
+=======
+>>>>>>> e29cd8505b61fa62029ad0f241a9f46b737e3ddc
     ...secondarySubjects,
     ...secondarySubjects,
     ...secondarySubjects,
@@ -154,8 +164,11 @@ document.getElementById("submitModal").addEventListener("click", function () {
       // Create a study row
       const studyRow = document.createElement("tr");
       const studyHoursCell = document.createElement("td");
+<<<<<<< HEAD
       const tertiarySubjectProbability = 0.1; // 10% chance
 
+=======
+>>>>>>> e29cd8505b61fa62029ad0f241a9f46b737e3ddc
       studyHoursCell.textContent = "1"; // 1-hour study block
       studyHoursCell.classList.add("hours-col");
       studyRow.appendChild(studyHoursCell);
@@ -165,11 +178,16 @@ document.getElementById("submitModal").addEventListener("click", function () {
         let subject;
 
         if (prevSubjectSpan) {
+<<<<<<< HEAD
+=======
+          // Continue the previous subject for 2-hour blocks
+>>>>>>> e29cd8505b61fa62029ad0f241a9f46b737e3ddc
           subject = prevSubjectSpan;
           prevSubjectSpan = null;
         } else {
           const subjectIndex =
             (Math.floor(block / 2) + dayIndex) % weightedSubjects.length;
+<<<<<<< HEAD
 
           if (Math.random() < tertiarySubjectProbability) {
             subject = tertiarySubjects;
@@ -178,6 +196,11 @@ document.getElementById("submitModal").addEventListener("click", function () {
           }
 
           if (subject !== tertiarySubjects) {
+=======
+          subject = subjectsForRow[subjectIndex];
+          if (subject !== tertiarySubjects) {
+            // If the subject is not tertiary, it should span the next row
+>>>>>>> e29cd8505b61fa62029ad0f241a9f46b737e3ddc
             prevSubjectSpan = subject;
           }
         }
@@ -198,6 +221,7 @@ document.getElementById("submitModal").addEventListener("click", function () {
     studyPlanTablesContainer.appendChild(table);
   }
 
+<<<<<<< HEAD
   // Create a table to display the subject counts with percentages
   const countsTable = document.createElement("table");
   countsTable.id = "subjectCountsTable";
@@ -217,6 +241,17 @@ document.getElementById("submitModal").addEventListener("click", function () {
     const blocks = subjectCounts[subject];
     const percentage = ((blocks / totalBlocksAllocated) * 100).toFixed(2); // Calculate percentage based on total blocks allocated
     row.innerHTML = `<td>${subject}</td><td>${blocks}</td><td>${percentage}%</td>`; // Display percentage in the table
+=======
+  // Create a table to display the subject counts
+  const countsTable = document.createElement("table");
+  countsTable.id = "subjectCountsTable";
+  const countsHeaderRow = document.createElement("tr");
+  countsHeaderRow.innerHTML = "<th>Subject</th><th>Blocks</th>";
+  countsTable.appendChild(countsHeaderRow);
+  Object.keys(subjectCounts).forEach((subject) => {
+    const row = document.createElement("tr");
+    row.innerHTML = `<td>${subject}</td><td>${subjectCounts[subject]}</td>`;
+>>>>>>> e29cd8505b61fa62029ad0f241a9f46b737e3ddc
     countsTable.appendChild(row);
   });
 
@@ -227,6 +262,7 @@ document.getElementById("submitModal").addEventListener("click", function () {
   );
 });
 
+<<<<<<< HEAD
 // Function to strategically insert breaks into the study schedule
 function insertBreaks(totalBlocksPerDay, daysPerWeek, breakDuration) {
   const breakBlocksPerDay = Math.floor(breakDuration / 2); // Convert break duration to blocks
@@ -259,6 +295,8 @@ function insertBreaks(totalBlocksPerDay, daysPerWeek, breakDuration) {
   return schedule;
 }
 
+=======
+>>>>>>> e29cd8505b61fa62029ad0f241a9f46b737e3ddc
 // Function to shuffle an array
 function shuffleArray(array) {
   for (let i = array.length - 1; i > 0; i--) {
@@ -267,6 +305,12 @@ function shuffleArray(array) {
   }
 }
 
+<<<<<<< HEAD
+=======
+// Close the modal
+document.getElementById("studyPlanModal").style.display = "none";
+
+>>>>>>> e29cd8505b61fa62029ad0f241a9f46b737e3ddc
 // Limit the "days per week" input to a maximum of 7
 document.getElementById("daysInput").addEventListener("input", function () {
   const inputValue = parseInt(this.value);

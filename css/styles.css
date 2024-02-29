@@ -4,7 +4,11 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
+<<<<<<< HEAD
   background: linear-gradient(to right, #000000, #434343);
+=======
+  background-color: #08081a;
+>>>>>>> e29cd8505b61fa62029ad0f241a9f46b737e3ddc
   color: white;
   font-family: 'Poppins', sans-serif; }
 
@@ -12,7 +16,11 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+<<<<<<< HEAD
   background: linear-gradient(to right, #000000, #434343);
+=======
+  background-color: blue;
+>>>>>>> e29cd8505b61fa62029ad0f241a9f46b737e3ddc
   width: 300px;
   height: 300px; }
   .grandparent .parent {

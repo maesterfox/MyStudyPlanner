@@ -108,15 +108,7 @@ document.getElementById("submitModal").addEventListener("click", function () {
   // Initialize the subject counts
   const subjectCounts = {};
 
-  const daysOfWeek = [
-    "Monday",
-    "Tuesday",
-    "Wednesday",
-    "Thursday",
-    "Friday",
-    "Saturday",
-    "Sunday",
-  ];
+  const daysOfWeek = ["Mon", "Tues", "Wed", "Thurs", "Fri", "Sat", "Sun"];
   const studyPlanTablesContainer = document.getElementById("studyPlanTables");
   studyPlanTablesContainer.innerHTML = "";
 
@@ -156,7 +148,7 @@ document.getElementById("submitModal").addEventListener("click", function () {
 
     // Table Header
     const headerRow = document.createElement("tr");
-    headerRow.innerHTML = '<th class="hours-col">Hours</th>';
+    headerRow.innerHTML = '<th class="hours-col">Hrs</th>';
     for (let dayIndex = 0; dayIndex < daysPerWeek; dayIndex++) {
       const day = daysOfWeek[dayIndex];
       const th = document.createElement("th");

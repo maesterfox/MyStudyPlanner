@@ -267,7 +267,7 @@ ul {
 /* Media query for mobile screens */
 @media only screen and (max-width: 600px) {
   .study-table {
-    font-size: 14px; /* Decrease font size for smaller screens */
+    font-size: 12px; /* Decrease font size for smaller screens */
   }
 
   button {

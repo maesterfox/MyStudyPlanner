@@ -1,60 +1,49 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;1,300;1,700&display=swap");
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Poppins', sans-serif; }
+  font-family: 'Poppins', sans-serif;
+}
 
 body {
   display: flex;
   flex-direction: column;
-  /* Set the flex direction to column */
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-<<<<<<< HEAD
   background: linear-gradient(to right, #000000, #434343);
-=======
-  background-color: #12123a;
-  color: #4aeaff;
->>>>>>> e29cd8505b61fa62029ad0f241a9f46b737e3ddc
+  color: white;
   text-align: center;
-  /* Center-align text content */ }
+}
 
 h1, p, #generateTablesButton {
-<<<<<<< HEAD
   margin: 24px;
   font-size: 24px;
-  /* Add some spacing between elements */ }
+}
 
 h1 {
   margin-top: 2%;
   font-size: 48px;
   text-shadow: 0 0 3px white, 0 0 5px white;
-  font-weight: 700; }
+  font-weight: 700;
+}
 
-  h2 {
-    margin-top: 2%;
-    font-size: 32px;
-    color: whitesmoke;
-    text-shadow: 0 0 1px white, 0 0 3px rgb(46, 46, 46);
-    font-weight: 700;
-    margin-bottom: 20px;
-  }
-=======
-  margin: 15px;
-  /* Add some spacing between elements */ }
+h2 {
+  margin-top: 2%;
+  font-size: 32px;
+  color: whitesmoke;
+  text-shadow: 0 0 1px white, 0 0 3px rgb(46, 46, 46);
+  font-weight: 700;
+  margin-bottom: 20px;
+}
 
-h1 {
-  margin-top: 5%;
-  font-size: 48px;
-  text-shadow: 0 0 3px white; }
->>>>>>> e29cd8505b61fa62029ad0f241a9f46b737e3ddc
+.span {
+  font-style: italic;
+  font-weight: 100;
+}
 
-  .span {
-    font-style: italic;
-    font-weight: 100;
-  }
 button {
   margin: 10px;
   width: 300px;
@@ -62,9 +51,12 @@ button {
   font-size: 20px;
   border-radius: 8px;
   box-shadow: 0 0 10px whitesmoke;
-  transition: .5s ease-in-out; }
-  button:hover {
-    box-shadow: 0px 0px 25px white; }
+  transition: .5s ease-in-out;
+}
+
+button:hover {
+  box-shadow: 0px 0px 25px white;
+}
 
 .study-table {
   border-collapse: collapse;
@@ -72,76 +64,62 @@ button {
   margin-top: 30px;
   box-shadow: 0 0 5px whitesmoke;
   transition: .5s ease-in-out;
-  transform: transform .5s;
-<<<<<<< HEAD
-  margin-bottom: 10px;
-  border-radius: 8px;
   margin-bottom: 30px;
- }
-  
-  .study-table:hover {
-    opacity: 1;
-    box-shadow: 0 0 5px whitesmoke, 0 0 10px #4a4d55, 0 0 15px #28292c;
-    transform: scale(1.2); }
-  .study-table th, .study-table td {
-=======
-  margin-bottom: 10px; }
-  .study-table:hover {
-    opacity: 1;
-    box-shadow: 0 0 5px whitesmoke, 0 0 10px #6890e7, 0 0 15px #6890e7;
-    transform: scale(1.3); }
-  .study-table th, .study-table td {
-    border: 1px solid #342b52;
->>>>>>> e29cd8505b61fa62029ad0f241a9f46b737e3ddc
-    padding: 8px;
-    text-align: center; }
-  .study-table th {
-    background-color: #121c31;
-    color: #ffffff; }
-  .study-table td {
-<<<<<<< HEAD
-    color: #f1f1f5;
-    transition: .5 ease-in-out; }
-    .study-table td:hover {
-      background-color: #5a6364; }
-  .study-table .hours-col {
-    background-color: #35373a;
-=======
-    background-color: #4954aa;
-    color: #12123a;
-    transition: .5 ease-in-out; }
-    .study-table td:hover {
-      background-color: #4aeaff; }
-  .study-table .hours-col {
-    background-color: #1d2f55;
->>>>>>> e29cd8505b61fa62029ad0f241a9f46b737e3ddc
-  color: white; }
-  .study-table .hours-col:hover {
-    background-color: #1d2f55;
-  color: white; }
-  .study-table .break-cell {
-    background-color: #4f4f4f;
-    color: white;
-    width: 150px; }
-    .study-table .break-cell:hover {
-      background-color: black; }
+}
 
-      /* New styles for the subject counts table */
+.study-table:hover {
+  opacity: 1;
+  box-shadow: 0 0 5px whitesmoke, 0 0 10px #4a4d55, 0 0 15px #28292c;
+  transform: scale(1.2);
+}
+
+.study-table th, .study-table td {
+  padding: 8px;
+  text-align: center;
+}
+
+.study-table th {
+  background-color: #121c31;
+  color: #ffffff;
+}
+
+.study-table td {
+  color: #f1f1f5;
+  transition: .5 ease-in-out;
+}
+
+.study-table td:hover {
+  background-color: #5a6364;
+}
+
+.study-table .hours-col {
+  background-color: #35373a;
+  color: white;
+}
+
+.study-table .hours-col:hover {
+  background-color: #1d2f55;
+  color: white;
+}
+
+.study-table .break-cell {
+  background-color: #4f4f4f;
+  color: white;
+  width: 150px;
+}
+
+.study-table .break-cell:hover {
+  background-color: black;
+}
+
+/* New styles for the subject counts table */
 #subjectCountsTable {
   width: 50%;
   margin: 20px auto;
   border-collapse: collapse;
-<<<<<<< HEAD
-  border-radius: 12px;
+  border-radius: 8px; /* Adjusted to a single declaration */
   color: #fff99e;
   background-color: #282435;
-  border-radius: 8px;
-
-=======
-  border-radius: 8px;
-  color: #fff99e;
-  background-color: #282435;
->>>>>>> e29cd8505b61fa62029ad0f241a9f46b737e3ddc
 }
 
 #queryFields {
@@ -152,56 +130,23 @@ button {
   border: 1px solid #ddd;
   padding: 8px;
   text-align: center;
-<<<<<<< HEAD
-  border-radius: 8px;
-
-=======
->>>>>>> e29cd8505b61fa62029ad0f241a9f46b737e3ddc
 }
 
 #subjectCountsTable th {
   color: rgb(255, 255, 255);
   background-color: #0a0a0a;
-<<<<<<< HEAD
-  border-radius: 8px;
-
-=======
->>>>>>> e29cd8505b61fa62029ad0f241a9f46b737e3ddc
 }
 
-      /* Modal */
+/* Modal */
 .modal {
   display: none;
-  /* Add other styling for the modal */
-}
-
-.input-container {
-  display: block; 
-  margin-bottom: 15px;
-<<<<<<< HEAD
-  font-size: 24px;
-=======
->>>>>>> e29cd8505b61fa62029ad0f241a9f46b737e3ddc
-}
-
-.input-container input {
-  width: 100%;  /* Double the width */
-<<<<<<< HEAD
-  height: 3em;  /* Double the height */
-=======
-  height: 2em;  /* Double the height */
->>>>>>> e29cd8505b61fa62029ad0f241a9f46b737e3ddc
-}
-
-.custom-modal {
-  display: none;
   position: fixed;
-  z-index: 1001; /* Adjust based on your needs */
-  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 1001;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
 .custom-modal-content {
@@ -209,25 +154,60 @@ button {
   margin: 10% auto;
   padding: 20px;
   width: 50%;
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Drop shadow */
+  opacity: 0; /* Start with transparency */
+
+  transition: opacity 0.3s ease; /* Add transition for opacity */
+
 }
 
-<<<<<<< HEAD
+.custom-modal-content h2 {
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+.input-container {
+  margin-bottom: 15px;
+}
+
+.input-container input {
+  width: auto;
+  height: 40px;
+  padding: 0 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.button-container {
+  text-align: center;
+}
+
+.button-container button {
+  width: 100%;
+  height: 40px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.button-container button:hover {
+  background-color: #0056b3;
+}
+
 #closeModal {
   color: whitesmoke;
   font-size: 18px;
   font-weight: bold;
-  transition: .3s ease-in-out;
-
 }
 
 #closeModal:hover,
 #closeModal:focus {
   color: #929292;
   text-decoration: underline;
-  transition: .3s ease-in-out;
 }
-
-
-=======
->>>>>>> e29cd8505b61fa62029ad0f241a9f46b737e3ddc
-

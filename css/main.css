@@ -1,0 +1,176 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;1,300;1,700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif; }
+
+body {
+  display: flex;
+  flex-direction: column;
+  /* Set the flex direction to column */
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(to right, #000000, #434343);
+  text-align: center;
+  /* Center-align text content */ }
+
+h1, p, #generateTablesButton {
+  margin: 24px;
+  font-size: 24px;
+  /* Add some spacing between elements */ }
+
+h1 {
+  margin-top: 2%;
+  font-size: 48px;
+  text-shadow: 0 0 3px white, 0 0 5px white;
+  font-weight: 700; }
+
+  h2 {
+    margin-top: 2%;
+    font-size: 32px;
+    color: whitesmoke;
+    text-shadow: 0 0 1px white, 0 0 3px rgb(46, 46, 46);
+    font-weight: 700;
+    margin-bottom: 20px;
+  }
+
+  .span {
+    font-style: italic;
+    font-weight: 100;
+  }
+button {
+  margin: 10px;
+  width: 300px;
+  height: 50px;
+  font-size: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px whitesmoke;
+  transition: .5s ease-in-out; }
+  button:hover {
+    box-shadow: 0px 0px 25px white; }
+
+.study-table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-top: 30px;
+  box-shadow: 0 0 5px whitesmoke;
+  transition: .5s ease-in-out;
+  transform: transform .5s;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  margin-bottom: 30px;
+ }
+  
+  .study-table:hover {
+    opacity: 1;
+    box-shadow: 0 0 5px whitesmoke, 0 0 10px #4a4d55, 0 0 15px #28292c;
+    transform: scale(1.2); }
+  .study-table th, .study-table td {
+    padding: 8px;
+    text-align: center; }
+  .study-table th {
+    background-color: #121c31;
+    color: #ffffff; }
+  .study-table td {
+    color: #f1f1f5;
+    transition: .5 ease-in-out; }
+    .study-table td:hover {
+      background-color: #5a6364; }
+  .study-table .hours-col {
+    background-color: #35373a;
+  color: white; }
+  .study-table .hours-col:hover {
+    background-color: #1d2f55;
+  color: white; }
+  .study-table .break-cell {
+    background-color: #4f4f4f;
+    color: white;
+    width: 150px; }
+    .study-table .break-cell:hover {
+      background-color: black; }
+
+      /* New styles for the subject counts table */
+#subjectCountsTable {
+  width: 50%;
+  margin: 20px auto;
+  border-collapse: collapse;
+  border-radius: 12px;
+  color: #fff99e;
+  background-color: #282435;
+  border-radius: 8px;
+
+}
+
+#queryFields {
+  display:none;
+}
+
+#subjectCountsTable th, #subjectCountsTable td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center;
+  border-radius: 8px;
+
+}
+
+#subjectCountsTable th {
+  color: rgb(255, 255, 255);
+  background-color: #0a0a0a;
+  border-radius: 8px;
+
+}
+
+      /* Modal */
+.modal {
+  display: none;
+  /* Add other styling for the modal */
+}
+
+.input-container {
+  display: block; 
+  margin-bottom: 15px;
+  font-size: 24px;
+}
+
+.input-container input {
+  width: 100%;  /* Double the width */
+  height: 3em;  /* Double the height */
+}
+
+.custom-modal {
+  display: none;
+  position: fixed;
+  z-index: 1001; /* Adjust based on your needs */
+  background-color: rgba(0, 0, 0, 0.8);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.custom-modal-content {
+  background-color: #fefefe;
+  margin: 10% auto;
+  padding: 20px;
+  width: 50%;
+}
+
+#closeModal {
+  color: whitesmoke;
+  font-size: 18px;
+  font-weight: bold;
+  transition: .3s ease-in-out;
+
+}
+
+#closeModal:hover,
+#closeModal:focus {
+  color: #929292;
+  text-decoration: underline;
+  transition: .3s ease-in-out;
+}
+
+
+

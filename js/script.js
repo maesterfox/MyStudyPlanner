@@ -1,5 +1,7 @@
 // In your external JavaScript file
 
+// Possibly addig a drag and drop feature 
+
 document.addEventListener("DOMContentLoaded", function () {
   showLoader();
 

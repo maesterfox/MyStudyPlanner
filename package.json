@@ -4,12 +4,23 @@
   "description": "JS practice",
   "main": "main.js",
   "scripts": {
-    "sass": "node-sass -w scss/ -o css/ --recursive"
+    "sass": "node-sass -w scss/ -o css/ --recursive",
+    "start": "nodemon server.js"
   },
   "author": "David Fox",
   "license": "MIT",
   "dependencies": {
     "bootstrap": "^5.3.1",
-    "node-sass": "^9.0.0"
+    "compression": "^1.7.4",
+    "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
+    "express": "^4.19.2",
+    "express-cache-controller": "^1.1.0",
+    "express-rate-limit": "^7.2.0",
+    "express-session": "^1.18.0",
+    "express-validator": "^7.0.1",
+    "morgan": "^1.10.0",
+    "node-sass": "^9.0.0",
+    "nodemon": "^3.1.0"
   }
 }
